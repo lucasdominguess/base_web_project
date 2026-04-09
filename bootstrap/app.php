@@ -1,7 +1,6 @@
 <?php
 
 use App\Exceptions\CustomExcepiton;
-use App\Http\Middleware\XssCleanMiddleware;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\LazyLoadingViolationException;
 use Illuminate\Foundation\Application;
