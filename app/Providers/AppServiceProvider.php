@@ -36,10 +36,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Route::pattern('id', '[0-9]+');
+        Route::pattern('id', '[0-9]+');
         // Gate para verificar se o usuário é um Administrador
-        // Gate::define('Gate-Admin', function ($user) {
-        //     // return $user->hasRole(Roles::ADMIN->label());
-        // });
+        Gate::define('Gate-Admin', function ($user) {
+            // return $user->hasRole(Roles::ADMIN->label());
+        });
     }
 }
