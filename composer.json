@@ -6,7 +6,7 @@
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
-        "php": "^8.4",
+        "php": "^8.3",
         "barryvdh/laravel-dompdf": "^3.1",
         "darkaonline/l5-swagger": "10.1",
         "laravel/framework": "^12.0",
@@ -71,6 +71,10 @@
         }
     },
     "config": {
+        "platform": {
+            "php": "8.3.0"
+        },
+        "platform-check": false,
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,

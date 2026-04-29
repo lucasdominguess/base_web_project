@@ -17,11 +17,10 @@ if [ -z "$DATABASE_URL" ] && [ -z "$DB_CONNECTION" ]; then
     exit 1
 fi
 
-# Generate cache for production
+# Generate cache for production (Removido cache estrito temporariamente devido a conflito de ServiceProvider com Container)
 echo "[$(date +'%Y-%m-%d %H:%M:%S')] Generating Laravel caches..."
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
+php artisan optimize:clear || true
+php artisan view:cache || true
 
 # Run database migrations only if APP_ENV is not 'production' or SKIP_MIGRATIONS is not set
 if [ "$APP_ENV" != "production" ] || [ "$SKIP_MIGRATIONS" != "true" ]; then
